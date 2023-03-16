@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 body{
-background-image: url('https://wallpaperaccess.com/full/1642299.jpg'); 
-color: #fff;
+background-image: url('https://img.freepik.com/premium-photo/black-brick-wall-building_73152-3788.jpg'); 
+background-repeat: no-repeat;
+background-size: cover;
 
 }
 
@@ -52,7 +53,6 @@ margin-top: 200px;
 }
 
 #play-me{
-
 display: flex;
 justify-content: center;
 font-size: x-large;
@@ -61,8 +61,6 @@ font-family: 'DotGothic16', sans-serif;
 color: #333;
 background-color: #b8196a;
 padding: 50px 150px;
-
-
 }
 
 
