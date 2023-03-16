@@ -46,18 +46,21 @@ nav{
 
 
 .button-wrap{
-border: #fff;
-border-width: 2px;
-padding: 200px 400px;
+display: flex;
+justify-content: center;
+margin-top: 200px;
 }
 
 #play-me{
+
+display: flex;
+justify-content: center;
 font-size: x-large;
 box-shadow: none;
 font-family: 'DotGothic16', sans-serif;
 color: #333;
 background-color: #b8196a;
-padding: 30px 50px;
+padding: 50px 150px;
 
 
 }
