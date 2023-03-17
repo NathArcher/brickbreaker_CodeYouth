@@ -6,6 +6,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Merriweather&family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+    
+#gameover {
+position:  absolute;
+width: 800;
+height: 600;
+background : rgba (0,0,0,0.5);
+display: none;
+}
+
+#youWin {
+    width: 100px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    display: none;
+
+}
+  
+#youLose {
+    width: 600px;
+    height: 800px
+    position: absolute;
+    top:100px;
+    left: 474px;
+    display: none;
+}
+#restart {
+    position:absolute;
+    top:310px;
+    left: 155px;
+    cursor: pointer;
+    font-size: 1.25cm;
+    color: #FFF;
+}
+</style>
 </head>
 <body>
 	<header class="top-nav">
@@ -33,19 +69,31 @@
                 <h2>Game Rules</h2>
             </p>
         </div>
-        </div>
+       </div>
 
+       
+     
         <div class="container">
-        <div class="game-area">
-                <canvas id="canvas" width="800" height="600"></canvas>
+        
+        <div class="game-area">   
+        
+            <canvas id="canvas" width="800" height="600"></canvas>
+           
             <div class="button-container">
                     <button id="arrow-keys-btn">Arrow Keys</button>
-                    <button id="mouse-control">Mouse</button>
+                    <button id="mouse-control">Mouse</button> 
             </div>
-            </div>
-    </div>
-
+        </div> 
+        
+        </div>
+       <div id = "gameover">
+            <img src = "Images\You_win.jpg" alt= "" id = "youWin">
+            <img src = "Images\game-over.jpg" alt= "" id = "youLose">
+            <div id="restart">Play Again!</div>
+        </div>
+        
     </main>    
 	<script src="game.js"></script>
+    
 </body>
 </html>
