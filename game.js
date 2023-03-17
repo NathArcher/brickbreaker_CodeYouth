@@ -7,7 +7,7 @@ const bgImg = new Image ();
 bgImg.src = "Images/whiteBG.jpg";
 //lifepoints
 const LPImg = new Image ();
-LPImg.src = "Images/heartImg.jpg";
+LPImg.src = "Images/heartImg.png";
 
 canvas.style.border = "1px solid #OFF"
 //defines life variable, score variable and level variable
@@ -16,7 +16,7 @@ let SCORE = 0;
 const scoreUnit = 1;
 let updateScore = document.querySelector ('#score');
 let LEVEL = 1;
-const maxLevel = 3;
+const maxLevel = 1;
 let gameOver = false;
 
 //Bricks
@@ -249,22 +249,20 @@ function endGame (){
 
 // Game stats
 
-function showLifePoints(lifeCount){
+function showLifePoints(lifeCount, xPosition){
     // clear previous life images
     content.clearRect(0, 0, 150, 30);
     // draw heart images for each remaining life
     for (let i = 0; i < lifeCount; i++) {
-        content.drawImage(LPImg, i * 35, 5, width = 30, height = 30);
+        content.drawImage(LPImg, i * 35 + xPosition, 5, width = 30, height = 30);
     }
 }
 
 function showLevel (text, textX, textY){
-    //draw text
+    //draw text 
+    content.font = "bold 15px DotGothic16";
     content.fillstyle = "#222323";
-    content.font = "15px Dot Gothica";
-    content.fillText (text, textX, textY);
-
-    
+    content.fillText (text, textX, textY);   
 }
 
 
@@ -273,9 +271,9 @@ function draw (){
     drawBall ();
     drawBricks();
     //show life points
-    showLifePoints (LIFE);
+    showLifePoints (LIFE, 10);
     //show Level
-    showLevel ("Level: " + LEVEL, canvas.width - 80, 25);
+    showLevel ("Level: " + LEVEL, canvas.width - 80, 30);
     //show Score
     updateScore.textContent = (SCORE);
 }
@@ -302,7 +300,7 @@ function loop () {
 loop ();
 
 //gameover
-const gameOverScreen = document.querySelector("#gameover")
+const gameOverScreen = document.querySelector("#game-over")
 const youWin = document.querySelector("#youWin")
 const youLose = document.querySelector("#youLose")
 const restart = document.querySelector("#restart")
