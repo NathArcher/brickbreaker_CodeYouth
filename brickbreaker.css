@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 .logo {
     margin-right: 10px;
 }
@@ -20,10 +19,6 @@
     font-family: 'DotGothic16', sans-serif;
     font-size: xx-large;
     padding: 20px;
-}
-
-.score-area{
-    margin-right:50px;
 }
 
 main{ 
@@ -63,6 +58,7 @@ main{
 .control-group input[type="range"] {
     flex: 2;
 }
+
 .game-rules{
     margin-top: 10%;
 }
@@ -70,6 +66,27 @@ main{
 .game-area {
     margin: 20px;
     position: relative;
+
+header {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: xx-large;
+	padding: 20px;
+}
+  
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 100vh;
+}
+
+.game-area {
+	flex: 1;
+	margin: 20px;
+	position: relative;
 }
 
 canvas {
@@ -82,6 +99,18 @@ canvas {
 	display: flex;
 	justify-content: center;
 	margin-top: 10px;
+}
+
+
+.score-area {
+	flex: 0 0 200px;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	bottom: 600px;
+	right: 0;
 }
 
 p {
@@ -105,4 +134,36 @@ button {
 	font-weight: bold;
 	box-sizing: border-box;
 }
-
+#gameover {
+    position:  absolute;
+    width: 800;
+    height: 600;
+    background : rgba (0,0,0,0.5);
+    display: none;
+    }
+    
+    #youWin {
+        width: 100px;
+        position: absolute;
+        top: 200px;
+        left: 150px;
+        display: none;
+    
+    }
+      
+    #youLose {
+        width: 600px;
+        height: 800px;
+        position: absolute;
+        top:100px;
+        left: 474px;
+        display: none;
+    }
+    #restart {
+        position:absolute;
+        top:310px;
+        left: 155px;
+        cursor: pointer;
+        font-size: 1.25cm;
+        color: #FFF;
+    }
