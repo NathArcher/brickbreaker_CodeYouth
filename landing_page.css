@@ -5,8 +5,11 @@ body{
 background-image: url('https://img.freepik.com/premium-photo/black-brick-wall-building_73152-3788.jpg'); 
 background-repeat: no-repeat;
 background-size: cover;
-
+background-color: #000000;
 }
+
+
+
 
 .title{
     font-size: xx-large;
@@ -66,41 +69,60 @@ margin-top: 10px;
 #play-me{
 display: flex;
 justify-content: center;
-font-size: x-large;
-box-shadow: none;
+font-size: 40px;
+box-shadow: inset 0 0 0 rgb(255, 255, 255);
+border: none;
 font-family: 'DotGothic16', sans-serif;
-color: #333;
-background-color: #b8196a;
+color: #ffffff;
+background-color: #333;
 padding: 50px 150px;
+transition: ease-out 0.5s;
+cursor: pointer;
 }
 
+
+#play-me:hover {
+    box-shadow: inset 600px 0 0 0 rgb(255, 255, 255);
+    cursor: pointer;
+    color: black;
+}
 
 .rulebox1 {
 display: flex;
 justify-content: center;
 background-color: #333;
-margin-top: 50px;
+margin-top: 80px;
+margin-right: 200px;
+margin-left: 200px;
 }
 
 .rulebox2 {
     display: flex;
     justify-content: center;
     background-color: #333;
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-right: 100px;
+    margin-left: 100px;
     }
     
 .rulebox3 {
     display: flex;
     justify-content: center;
     background-color: #333;
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-right: 200px;
+    margin-left: 200px;
     }
+
 .rulebox4 {
     display: flex;
     justify-content: center;
     background-color: #333;  
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-right: 300px;
+    margin-left: 300px;
 }
+
 #rules{
 color: #fff;
 font-family: 'DotGothic16', sans-serif;
