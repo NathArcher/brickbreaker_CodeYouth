@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.logo {
+    margin-right: 10px;
+}
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.score-area{
+    margin-right:50px;
+}
+
+main{ 
+    display:flex;
+    flex-basis: 100%;
+    flex-direction: row;
+} 
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    left: 20px; 
+    height: 800px;
+    width: 350px;
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.settings-container h2 {
+    margin-top: 0;
+    margin-bottom: 5%;
+    font-size: 20px;
+}
+   
+.control-group {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.control-group label {
+    flex: 1;
+    font-size: 16px;
+}
+  
+.control-group input[type="range"] {
+    flex: 2;
+}
+.game-rules{
+    margin-top: 10%;
+}
+
+.game-area {
+    margin: 20px;
+    position: relative;
+}
+
+
+canvas {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #333;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	margin: 0 10px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+#gameover {
+    position:  absolute;
+    width: 800;
+    height: 600;
+    background : rgba (0,0,0,0.5);
+    display: none;
+    }
+    
+    #youWin {
+        width: 100px;
+        position: absolute;
+        top: 200px;
+        left: 150px;
+        display: none;
+    
+    }
+      
+    #youLose {
+        width: 600px;
+        height: 800px;
+        position: absolute;
+        top:100px;
+        left: 474px;
+        display: none;
+    }
+    #restart {
+        position:absolute;
+        top:310px;
+        left: 155px;
+        cursor: pointer;
+        font-size: 1.25cm;
+        color: #FFF;
+    }
+
+  

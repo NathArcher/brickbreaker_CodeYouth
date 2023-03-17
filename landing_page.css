@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+body{
+background-image: url('https://img.freepik.com/premium-photo/black-brick-wall-building_73152-3788.jpg'); 
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.title{
+    font-size: xx-large;
+    margin: 10px;
+    color: #fff;
+}
+
+.nav-pages ul {
+margin:0;
+padding:0;
+display: flex;
+}
+
+.nav-pages li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-pages li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    display: block;
+}
+
+.nav-pages li:hover {
+    background-color: #3d3d3d;
+}
+
+
+nav{
+    display: flex;
+    background-color: 333;
+    justify-content: space-between;
+    font-family: 'DotGothic16', sans-serif;
+    align-items: center;
+}
+.welcome-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+
+}
+#welcome{
+color: #fff;
+font-family: 'DotGothic16', sans-serif;
+font-size: 60px;
+
+}
+
+.button-wrap{
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+#play-me{
+display: flex;
+justify-content: center;
+font-size: x-large;
+box-shadow: none;
+font-family: 'DotGothic16', sans-serif;
+color: #333;
+background-color: #b8196a;
+padding: 50px 150px;
+}
+
+
+.rulebox1 {
+display: flex;
+justify-content: center;
+background-color: #333;
+margin-top: 50px;
+}
+
+.rulebox2 {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin-top: 50px;
+    }
+    
+.rulebox3 {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin-top: 50px;
+    }
+.rulebox4 {
+    display: flex;
+    justify-content: center;
+    background-color: #333;  
+    margin-top: 50px;
+}
+#rules{
+color: #fff;
+font-family: 'DotGothic16', sans-serif;
+font-size: medium;
+}

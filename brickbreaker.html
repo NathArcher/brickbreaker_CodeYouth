@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brick Breaker</title>
+	<link rel="stylesheet" href="brickbreaker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Merriweather&family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="top-nav">
+    <div class="logo">Logo</div>
+    <h1>Brick Breaker</h1>
+    <div class="score-area">
+        <p>Score:</p>
+        <h2 id="score">0</h2>
+    </div>
+    </header>
+
+    <main>
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <div class="control-group">
+                <label for="sound-control">Sound:</label>
+                <input type="range" id="sound-control" min="0" max="100" value="50">
+        </div>
+        <div class="control-group">
+                <label for="music-control">Music:</label>
+                <input type="range" id="music-control" min="0" max="100" value="50">
+        </div>
+        <div>
+            <p class="game-rules">
+                <h2>Game Rules</h2>
+            </p>
+        </div>
+       </div>
+
+       
+     
+        <div class="container">
+        
+        <div class="game-area">   
+        
+            <canvas id="canvas" width="800" height="600"></canvas>
+           
+            <div class="button-container">
+                    <button id="arrow-keys-btn">Arrow Keys</button>
+                    <button id="mouse-control">Mouse</button> 
+            </div>
+        </div> 
+        
+        </div>
+       <div id = "gameover">
+            <img src = "Images\You_win.jpg" alt= "" id = "youWin">
+            <img src = "Images\game-over.jpg" alt= "" id = "youLose">
+            <div id="restart">Play Again!</div>
+        </div>
+        
+    </main>    
+	<script src="game.js"></script>
+    
+</body>
+</html>
