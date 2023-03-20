@@ -15,8 +15,8 @@ let LIFE = 3; //give player 3 lives
 let SCORE = 0; 
 const scoreUnit = 1;
 let updateScore = document.querySelector ('#score');
-let LEVEL = 3;
-const maxLevel = 1;
+let LEVEL = 1;
+const maxLevel = 3;
 let gameOver = false;
 
 //Bricks
