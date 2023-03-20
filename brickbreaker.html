@@ -33,20 +33,32 @@
                 <h2>Game Rules</h2>
             </p>
         </div>
-        </div>
+       </div>
 
+       
+     
         <div class="container">
-        <div class="game-area">
-                <canvas id="canvas" width="800" height="600"></canvas>
+        
+        <div class="game-area">   
+        
+            <canvas id="canvas" width="800" height="600"></canvas>
+           
             <div class="button-container">
                     <button id="arrow-keys-btn">Arrow Keys</button>
-                    <button id="mouse-control">Mouse</button>
+                    <button id="mouse-control">Mouse</button> 
             </div>
-            </div>
-    </div>
-
-    </main>  
-	 <script src="game.js"></script> 
+            
+        </div> 
+        </div>
+        
+       <div id="game-over">
+            <img src="Images\You-win-bricks.jpg" alt= "" id = "youWin">
+            <img src="Images\game-over.png" alt= "" id = "youLose">
+            <div id="restart">Play Again!</div>
+        </div>
+    
+    </main>    
+	<script src="game.js"></script>
     
 </body>
 </html>
