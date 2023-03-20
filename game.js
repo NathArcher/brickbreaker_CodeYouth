@@ -1,6 +1,8 @@
 //Canvas Element
 const canvas = document.getElementById ('canvas');
 const content = canvas.getContext ("2d");
+let mouseControl = document.querySelector ('#mouse-control')
+let keysControl = document.querySelector ('#arrow-keys-btn')
 
 //background
 const bgImg = new Image ();
@@ -18,6 +20,7 @@ let updateScore = document.querySelector ('#score');
 let LEVEL = 1;
 const maxLevel = 1;
 let gameOver = false;
+
 
 //Bricks
     //creates and defines the brick variable
@@ -90,7 +93,7 @@ content.fillRect (paddle.x, paddle.y, paddle.width, paddle.height);
 drawPaddle ();
 
 //Ball
-//defines the ball size and placement
+//defines ball size and placement
 const ballRadius = 8;
 const ball = {
     x : canvas.width/2,
@@ -115,9 +118,25 @@ function drawBall (){
     content.closePath ();
 }
 //Mouse
+// function movePaddle(){
+// add event listener to the canvas
+// canvas.addEventListener("mousemove", movePaddle, false);
 
-//Keys
-//this sets the default for each key to false unless eventlistener picks up keypress
+// // define the movePaddle function
+// function movePaddle(e) {
+//     // get the x coordinate of the mouse pointer relative to the canvas
+//     let relativeX = e.clientX - canvas.offsetLeft;
+
+//     // move the paddle to the mouse pointer's x coordinate
+//     if (relativeX > 0 && relativeX < canvas.width) {
+//         paddle.x = relativeX - paddle.width / 2;
+//     }
+// }
+  
+
+// Keys
+// this sets the default for each key to false unless eventlistener picks up keypress
+
 leftArrow = false;
 rightArrow = false;
 
@@ -125,6 +144,7 @@ rightArrow = false;
 
 //this lets the game know if the user presses down the left/right key
 document.addEventListener ("keydown", function (event){
+    const keyCode = event.keyCode;
     if (event.keyCode == 37){
         leftArrow = true;
     }else if (event.keyCode == 39) {
@@ -144,12 +164,8 @@ document.addEventListener ("keyup", function (event){
 
 //Functions for objects on canvas
 
-
-
-
 //Gameplay
-
-function movePaddle(){
+        function movePaddle(){
     if (rightArrow && paddle.x + paddle.width < canvas.width){
         paddle.x += paddle.dx;
     }else if (leftArrow && paddle.x > 0){
@@ -189,7 +205,7 @@ function ballPaddleCollision (){
     if (ball.x < paddle.x + paddle.width && ball.x > paddle.x && paddle.y < paddle.y + 
         paddle.height && ball.y > paddle.y) {
             //ball and paddle collision point
-            let collidePoint = ball.x - (paddle.x + paddle.width/2)
+            let collidePoint = ball.x - (paddle.x + paddle.width/2);
             collidePoint = collidePoint / (paddle.width/2);
             //calculate angle of the ball
             let angle = collidePoint * Math.PI/3;
@@ -199,7 +215,7 @@ function ballPaddleCollision (){
         }}
 
 //if ball hits brick it will break
-function ballBrickCollision(){
+function ballBrickCollision (){
     for (let r = 0; r < brick.row; r++){
         for (let c = 0; c < brick.column; c++){
             let b = bricks[r][c];
@@ -207,7 +223,7 @@ function ballBrickCollision(){
                 if (ball.x + ball.radius > b.x && ball.x - ball.radius < b.x + brick.width && ball.y + ball.radius > b.y && ball.y - ball.radius < b.y + brick.height){
                     ball.dy = - ball.dy;
                     //make the brick break
-                    b.status = false
+                    b.status = false;
                     //raise the score
                     SCORE += scoreUnit;
                 }
@@ -217,7 +233,7 @@ function ballBrickCollision(){
 }
 
 //check level/increase difficulty
-function levelUp(){
+function levelUp (){
 let isLevelDone = true;
 for(let r = 0; r < brick.row; r++) {
     for (let c = 0; c < brick.column; c++){
@@ -281,11 +297,11 @@ function draw (){
 function update () {
     movePaddle ();
     moveBall ();
-    ballWallCollision();
-    ballPaddleCollision();
-    ballBrickCollision();
+    ballWallCollision ();
+    ballPaddleCollision ();
+    ballBrickCollision ();
     endGame ();
-    levelUp();
+    levelUp ();
 }
 //Game Loop
 function loop () {
@@ -298,6 +314,7 @@ function loop () {
 }
 }
 loop ();
+
 
 //gameover
 const gameOverScreen = document.querySelector("#game-over")
