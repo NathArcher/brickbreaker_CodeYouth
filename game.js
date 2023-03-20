@@ -144,9 +144,6 @@ document.addEventListener ("keyup", function (event){
 
 //Functions for objects on canvas
 
-
-
-
 //Gameplay
 
 function movePaddle(){
